@@ -1,0 +1,31 @@
+d: 11
+n_epochs: 501 #2001
+n_lam: 10
+width:  100
+n_data: 100
+baseline: True
+
+n_max: 10
+rate: 1
+
+use_softmax: False
+experiment: 'unc'
+
+risk: 'cvar-min'
+
+synthetic_rate: 0
+
+n_eps: 10
+n_runs: 25 #25 #5 #10
+n_data_min: 0 #6
+
+block_size: 0
+fit_margins: True
+gen_p0: True
+alpha: 0.75
+
+eps_max: 100 #30 #110#120 #50 #30
+
+data_file: 'yearly_max_return_data'
+data_file_short_period: 'weekly_max_return_data'
+cost_norm: 1
