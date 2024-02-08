@@ -120,7 +120,7 @@ try:
     advsm = datasm[adv_key]
     advsm = advsm * (advsm < 1e3)
     x_sm = np.stack(datasm['losses'])[:,0]
-    x_domain_sm = (x_sm / true_unc.mean(-1))
+    x_domain_sm = (x_sm / true_sm.mean(-1))
     x_domain_max = np.around(torch.max(x_sm / true_sm.mean(-1)).detach().numpy())
     x_ticks = np.arange(x_domain_max + 1, dtype=int)
 except :
@@ -212,4 +212,5 @@ plt.title("Daily Returns Expected Risk Evaluated Over\nIncreasing Uncertainty ($
 plt.legend(loc= "lower right", fontsize = 13)
 plt.tight_layout()
 plt.savefig("baseline.png")
+
 
